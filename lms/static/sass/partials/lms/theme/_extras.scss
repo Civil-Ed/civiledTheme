@@ -42,6 +42,7 @@ h3 span,
     padding-bottom: $content-padding-bottom;
     margin-top: $header-height;
     padding-left: 45px;
+    padding-right: 45px;
   }
 
   min-height: calc(100vh - #{$header-height + $content-padding-top + $content-padding-bottom + $footer-height}); // sticky footer
@@ -187,6 +188,12 @@ nav.wrapper-preview-menu {
     border: none;
     box-shadow: none;
   }
+}
+
+
+.course-info .container {
+  margin: 0 !important;
+  display: contents !important;
 }
 
 .course-info {
@@ -443,6 +450,10 @@ nav.wrapper-preview-menu {
   background: $primary !important;
 }
 
+.empty-dashboard-message a.btn {
+  border-radius: 5px;
+}
+
 .login-register .section-title,
 .financial-assistance-wrapper .financial-assistance-form .section-title {
   color: $primary;
@@ -485,7 +496,7 @@ nav.wrapper-preview-menu {
   color: $white;
   padding: 20px;
   padding-left: 45px;
-  margin: 40px -20px 40px -45px !important;
+  margin: 40px -45px 40px -45px !important;
 }
 
 .orange-bg h1 {
@@ -516,6 +527,25 @@ nav.wrapper-preview-menu {
 
 .section {
   margin-bottom: 40px !important;
+}
+
+.contact {
+  p {
+    width: 300px;
+  }
+
+  span {
+    width: 40px;
+  }
+
+  .icon {
+    color: $primary;
+    font-size: 24px;
+  }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro {
+  padding: 0
 }
 
 @media (max-width: 600px) {
