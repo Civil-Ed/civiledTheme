@@ -41,7 +41,7 @@ h3 span,
     padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
     margin-top: $header-height;
-    padding-left: 20px;
+    padding-left: 45px;
   }
 
   min-height: calc(100vh - #{$header-height + $content-padding-top + $content-padding-bottom + $footer-height}); // sticky footer
@@ -469,7 +469,9 @@ nav.wrapper-preview-menu {
 }
 
 .about-main-container h1,
-.about-main-container p {
+.about-main-container p,
+.contact h1,
+.contact {
   text-align: left !important;
   line-height: 1.5em;
 }
@@ -482,7 +484,8 @@ nav.wrapper-preview-menu {
   background-color: $primary;
   color: $white;
   padding: 20px;
-  margin: 40px -20px 40px -20px !important;
+  padding-left: 45px;
+  margin: 40px -20px 40px -45px !important;
 }
 
 .orange-bg h1 {

@@ -1,16 +1,12 @@
-<%page expression_filter="h"/>
+<%page expression_filter="h" />
 <%! from django.utils.translation import ugettext as _ %>
-<%inherit file="../main.html" />
+    <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Contact")}</%block>
+    <%block name="pagetitle">${_("Contact")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>
-            <%block name="pageheader">${page_header or _("Contact")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">For any question regarding the usage of mytutor, please get in touch with <a href="mailto:contact@local.overhang.io">contact@local.overhang.io</a>.</%block>
-        </p>
-    </section>
-</main>
+    <div class="contact">
+        <h1>Get in touch</h1>
+        <p>Khartoum, Alriyadh, Mashtal St.</p>
+        <a>info@civilscope.org</a>
+        <p>+249-99-724-7082</p>
+    </div>
