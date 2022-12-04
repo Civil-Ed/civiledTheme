@@ -5,15 +5,18 @@ $content-padding-bottom: 10px;
 $header-height: 75px;
 $footer-height: 125.5px;
 
-body, body.view-profile {
+body,
+body.view-profile {
   min-height: initial;
   background-color: #fff;
 }
+
 %btn-pl-default-base {
   border-radius: 0;
 }
 
-.btn, .global-header .nav-links .secondary .btn {
+.btn,
+.global-header .nav-links .secondary .btn {
   border-radius: 0;
 }
 
@@ -21,18 +24,26 @@ body, body.view-profile {
   font-family: $font-family-title;
 }
 
-h1, h2, h3, h1 span, h2 span, h3 span, .nav-item {
+h1,
+h2,
+h3,
+h1 span,
+h2 span,
+h3 span,
+.nav-item {
   font-family: $font-family-title;
 }
 
 // It is necessary to specify `:not(.courseware) >` in order to not affect the style
 // of `#content.content-wrapper` inside the unit iframe in the MFE
-:not(.courseware) > #content.content-wrapper {
+:not(.courseware)>#content.content-wrapper {
   @include media-breakpoint-up(lg) {
     padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
     margin-top: $header-height;
+    padding-left: 20px;
   }
+
   min-height: calc(100vh - #{$header-height + $content-padding-top + $content-padding-bottom + $footer-height}); // sticky footer
 }
 
@@ -46,8 +57,9 @@ header.global-header {
     top: 0;
     width: 100%;
     z-index: 200; // necessary to keep the header on top of other elements
-    overflow: visible;  // fix for Safari
+    overflow: visible; // fix for Safari
   }
+
   //background-color: #4c61bf;
   box-shadow: none;
 }
@@ -63,76 +75,91 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
 /////////////////// Sign in form
 
 .login-register .form-field {
-    // Hide "Sign in with your company or school link"
-    button.enterprise-login {
-        display: none;
-    }
+
+  // Hide "Sign in with your company or school link"
+  button.enterprise-login {
+    display: none;
+  }
 }
 
 /////////////////// Home page
 .home header {
-  width:100%;
+  width: 100%;
   box-shadow: none;
   background-color: #fff;
 }
+
 .content-wrapper main-container {
   margin: 0;
 }
-.home > header .title {
-  width:100% !important;
+
+.home>header .title {
+  width: 100% !important;
   margin-left: 0;
   box-shadow: none;
   color: $white;
   padding: 0;
 }
 
-.home > header .outer-wrapper {
-  margin:0;
+.home>header .outer-wrapper {
+  margin: 0;
   padding: 0;
 }
 
-.home > header .title > .heading-group {
+.home>header .title>.heading-group {
   width: 100%;
   text-align: center;
 }
-.home > header .title > .heading-group h1 {
+
+.home>header .title>.heading-group h1 {
   color: #fff;
   text-align: center;
 }
 
-.animation-home-header-pop-up, .home > header .outer-wrapper {
+.animation-home-header-pop-up,
+.home>header .outer-wrapper {
   animation: none;
 }
 
-.highlighted-courses .courses, .find-courses .courses {
+.highlighted-courses .courses,
+.find-courses .courses {
   padding-top: 0;
 }
 
 .home .courses-container .courses .courses-listing {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+
   .courses-listing-item {
     margin: 0 20px 30px 20px;
+
     // Fix right margin
-    &:nth-child(4n), &:last-child {
+    &:nth-child(4n),
+    &:last-child {
       margin-right: 20px;
     }
   }
 }
 
-.courses-container .courses .course{
+.action .action-primary .action-update .js-login .login-button {
+  background-color: #ff7518 !important;
+}
+
+.courses-container .courses .course {
   border-bottom: solid 3px #ff7518;
   box-shadow: none !important;
   border-radius: 5px;
 }
 
-.courses-container .courses .course .course-image .cover-image {
-border-radius: 5px 5px 0 0 !important;
+.courses-container .courses .course .course-image .cover-image::before {
+  border-radius: 5px 5px 0 0;
 }
+
+
 .highlighted-courses .courses .course,
 .find-courses .courses .course {
-  border:none !important;
+  border: none !important;
   background-color: $gray-100 !important;
 }
 
@@ -143,10 +170,11 @@ border-radius: 5px 5px 0 0 !important;
 
 ////////////////// "View this course as staff/learner/..."
 nav.wrapper-preview-menu {
-    // It is necessary to specify `nav` in order to override the common higher priority rule
-    @include media-breakpoint-up(lg) {
-      margin-top: $header-height;
-    }
+
+  // It is necessary to specify `nav` in order to override the common higher priority rule
+  @include media-breakpoint-up(lg) {
+    margin-top: $header-height;
+  }
 }
 
 ////////////////// Course about page
@@ -165,17 +193,21 @@ nav.wrapper-preview-menu {
   .container {
     padding-bottom: 0;
   }
-  .details .inner-wrapper > section {
+
+  .details .inner-wrapper>section {
     margin-bottom: 0;
   }
+
   header.course-profile .intro-inner-wrapper .intro .main-cta {
     span.register {
       @extend %t-copy-base;
       padding: 10px 0;
     }
+
     strong {
       background-image: none;
-      border-radius: 0;
+      border-radius: 5px;
+
       &:hover:not(:disabled) {
         background-image: none;
       }
@@ -185,7 +217,8 @@ nav.wrapper-preview-menu {
 
 
 /////////////////// Course search
-.find-courses, .university-profile {
+.find-courses,
+.university-profile {
   background-color: #fff;
 }
 
@@ -193,6 +226,7 @@ nav.wrapper-preview-menu {
 .view-profile .profile-self .wrapper-profile-field-account-privacy {
   margin-top: -$content-padding-top;
 }
+
 .view-profile .wrapper-profile {
   background-color: #fff;
 }
@@ -206,18 +240,30 @@ nav.wrapper-preview-menu {
 .wrapper-account-settings .wrapper-header {
   height: 100px;
 }
+
 .wrapper-account-settings .wrapper-header .header-title {
   padding-top: 0;
 }
+
+.button-secondary-login {
+  border-radius: 5px;
+}
+
+.js-login .login-button {
+  background-color: $primary !important;
+}
+
 .wrapper-account-settings .wrapper-header .account-nav button.active {
   border-bottom-color: $primary;
 }
-.landing{
+
+.landing {
   padding: $section-padding;
   background-color: $primary;
   color: $white;
   text-align: center;
-  width: 100% !important;
+  width: 100vw;
+  border-radius: 5px;
 }
 
 .search_bar {
@@ -262,11 +308,12 @@ nav.wrapper-preview-menu {
     .card_header {
       position: relative;
       height: 200px;
+      border-radius: $border-radius;
       overflow: hidden;
 
       img {
         width: 100%;
-        border-radius: $border-radius $border-radius 0 0;
+        border-radius: $border-radius $border-radius 0 0 !important;
       }
 
       .icon {
@@ -284,7 +331,7 @@ nav.wrapper-preview-menu {
       align-items: baseline;
       justify-content: space-between;
       background-color: $transparent-white;
-      position:absolute;
+      position: absolute;
       color: #fff;
       width: $card-width;
       bottom: 85px;
@@ -309,28 +356,179 @@ nav.wrapper-preview-menu {
     }
   }
 }
+
 /////////////////// Footer
 .wrapper-footer {
   box-shadow: none;
   padding: 25px 40px;
 
   .wrapper-logo {
-      display: none;
+    display: none;
   }
+
   .copyright {
-      display: none;
+    display: none;
   }
+
   .nav-legal ul {
-      display: inline-block;
+    display: inline-block;
   }
+
   footer#footer-openedx .footer-about-openedx {
-      a {
-          float: none;
-      }
-      p {
-          text-align: right;
-      }
+    a {
+      float: none;
+    }
+
+    p {
+      text-align: right;
+    }
   }
 }
 
 
+.btn-blue,
+.account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn :not(.cancel-btn),
+.account-settings-message .alert-message .alert-actions .btn-alert-primary,
+.login-register .action-primary,
+.financial-assistance-wrapper .financial-assistance-form .action-primary,
+.verification-process .action-primary-blue,
+.verification-process .carousel .wrapper-task .controls .control .action,
+.verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action,
+.entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action,
+.verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a,
+.verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a,
+.verification-process.step-select-track .register-choice-audit .action-select input,
+.verification-process.step-confirmation .course-info .options .action-course,
+.verification-process.step-confirmation .course-info .course-actions .action-dashboard,
+.reverify-blocked .action-primary,
+.wrapper-authorize .btn-authorization-allow,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy,
+.btn-blue:active,
+.account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn:active:not(.cancel-btn),
+.account-settings-message .alert-message .alert-actions .btn-alert-primary:active,
+.login-register .action-primary:active,
+.financial-assistance-wrapper .financial-assistance-form .action-primary:active,
+.verification-process .action-primary-blue:active,
+.verification-process .carousel .wrapper-task .controls .control .action:active,
+.verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action:active,
+.entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action:active,
+.verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a:active,
+.verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a:active,
+.verification-process.step-select-track .register-choice-audit .action-select input:active,
+.verification-process.step-confirmation .course-info .options .action-course:active,
+.verification-process.step-confirmation .course-info .course-actions .action-dashboard:active,
+.reverify-blocked .action-primary:active,
+.wrapper-authorize .btn-authorization-allow:active,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn:active,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy:active,
+.btn-blue:focus,
+.account-settings-sections .section .account-deletion-details .paragon__modal-open .paragon__btn:focus:not(.cancel-btn),
+.account-settings-message .alert-message .alert-actions .btn-alert-primary:focus,
+.login-register .action-primary:focus,
+.financial-assistance-wrapper .financial-assistance-form .action-primary:focus,
+.verification-process .action-primary-blue:focus,
+.verification-process .carousel .wrapper-task .controls .control .action:focus,
+.verification-process .carousel .wrapper-task .controls .control .entitlement-actions-wrapper .entitlement-action:focus,
+.entitlement-actions-wrapper .verification-process .carousel .wrapper-task .controls .control .entitlement-action:focus,
+.verification-process .carousel .wrapper-task .msg .list-actions .action-retakephotos a:focus,
+.verification-process .carousel #wrapper-review .review-task-name .list-actions .action-editname a:focus,
+.verification-process.step-select-track .register-choice-audit .action-select input:focus,
+.verification-process.step-confirmation .course-info .options .action-course:focus,
+.verification-process.step-confirmation .course-info .course-actions .action-dashboard:focus,
+.reverify-blocked .action-primary:focus,
+.wrapper-authorize .btn-authorization-allow:focus,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn:focus,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy {
+  background: $primary !important;
+}
+
+.login-register .section-title,
+.financial-assistance-wrapper .financial-assistance-form .section-title {
+  color: $primary;
+}
+
+.global-header .nav-links .secondary a.register-btn,
+.global-header .nav-links .secondary a.sign-in-btn {
+  border-radius: $border-radius !important;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:not(:disabled) {
+  background-image: none;
+  border: none;
+  text-shadow: none;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+  background-image: none;
+  background-color: #df6514;
+}
+
+.empty-dashboard-message {
+  width: 50vw;
+}
+
+.about-main-container h1,
+.about-main-container p {
+  text-align: left !important;
+  line-height: 1.5em;
+}
+
+.about-main-container .intro p {
+  width: 70% !important;
+}
+
+.orange-bg {
+  background-color: $primary;
+  color: $white;
+  padding: 20px;
+  margin: 40px -20px 40px -20px !important;
+}
+
+.orange-bg h1 {
+  color: $white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.row li {
+  width: 350px;
+  margin: 20px 20px 0 0;
+  padding: 20px;
+  line-height: 1.3em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-bottom: solid 3px $primary;
+}
+
+.row div:first-child {
+  width: 60% !important;
+  margin-right: 20px;
+}
+
+.section {
+  margin-bottom: 40px !important;
+}
+
+@media (max-width: 600px) {
+  .about-main-container {
+    padding: 20px;
+  }
+
+  .about-main-container .intro p {
+    width: 100% !important;
+  }
+
+  .row div:first-child {
+    width: 100% !important;
+  }
+
+  .row li {
+    margin: 20px 0 0 0;
+  }
+}

@@ -1,16 +1,84 @@
-<%page expression_filter="h"/>
+<%page expression_filter="h" />
 <%! from django.utils.translation import ugettext as _ %>
-<%inherit file="../main.html" />
+    <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("About")}</%block>
+    <%block name="pagetitle">${_("About")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>
-            <%block name="pageheader">${page_header or _("About")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">mytutor is an online learning platform powered by <a href="https://open.edx.org">Open edX</a>. It runs with <a href="https://docs.tutor.overhang.io">Tutor</a>, with the customized <a href="https://github.com/overhangio/tutor-indigo">Indigo</a> theme.</%block>
-        </p>
-    </section>
-</main>
+
+    <div class="about-main-container">
+        <div class="intro">
+            <h1>About Us</h1>
+            <p>We're CivilScope, a Digital Social Database startup targeting Sudanese youth Initiatives,
+                Grassroots movements and start-up social enterprises.</p>
+            <p>Our goal is pretty simple, we believe in youth power and we want to advance it through a digital
+                civic infrastructure. That means providing the necessary tools, networks and expertise and
+                resources for social actors to amplify their impact.</p>
+            <p>Our platform acts through a social media like format in mapping social change actors while
+                providing a one-stop online resources center for everyone you might want to work with,
+                everything you need to learn, and every opportunity you can take - All produced and added by the
+                Community of social actors themselves. Thus creating an ecosystem of digital interactions and
+                collaborations that automatically maps actors and archives their posts, reports and shared
+                content. (We've published our beta Prototype on CivilScope.org/en).</p>
+        </div>
+        <div class="orange-bg">
+            <h1>Our Team</h1>
+            <p>We're young optimists, impatient for change. Our team includes 2 Web Developers, a highly
+                experienced Financial & Admin Manager, a Database Expert, A Talented Graphic Designer, A
+                Researcher and more. We're still growing and looking for more talented youths to join us on our
+                mission.</p>
+        </div>
+        <div class="row">
+            <div class="section">
+                <h1>Our Idea</h1>
+                <p>CivilEd.Org, a Massive Open Online Courses (MOOC) Platform with free high quality educational,
+                    technical training and capacity building content targeting Youth in Sudan and aiming to provide
+                    them with improved job skills to qualify them for better careers.</p>
+            </div>
+
+            <div class="section">
+                <h1>Why</h1>
+                <p>The environment and institutional voids of the developing world can make it increasingly difficult
+                    to truly benefit from all of the educational content available online. This is due in part to the
+                    language barrier, the major economic environment and the issue of internet access that still
+                    plagues 69.1% of Sudan's population.</p>
+                <p>CivilEd's mission is to provide free high quality education to African Youths everywhere, enabling
+                    them to develop themselves and their communities. We want to end the inequality race, and
+                    we're starting with making education a right, rather than a privilege.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h1>How</h1>
+            <p>To make this a reality, we plan to do 5 simple things</p>
+            <ul class="row">
+                <li>We build our platform using Open EdX, an Open Source Software made by EdX.org and
+                    used by over dozens of universities and Organisations. This provides us with the best
+                    developed features, A Design studio for courses and complete Learning Management
+                    System (LMS) for the platform - For Free.</li>
+                <li>We curate free and available online educational content and translate them into local
+                    courses in local dialects and base them within local context. (i.e. Digital Marketing in
+                    Sudan, Graphic Designing through Smartphones, Program Management)</li>
+                <li>We partner with different entities such as Organisations that deliver workshops,
+                    company employee training programs, university courses and expert centered content.
+                    We help them in producing it as online courses or simply hosting it, in order to make it
+                    available to as many people, as possible and at any time, at no future costs.</li>
+                <li>We use mobile apps to allow users to download courses from our platform and even
+                    share them with other users through WiFi and hotspot capabilities. Guaranteeing access
+                    to users in low or no internet access regions through local focal points and peer-to-peer
+                    sharing.</li>
+                <li>By making our courses and programs free to audit, we ensure access for everyone. And
+                    by selling certificates for course completion at affordable prices, we help our users build
+                    up their résumés while supporting our partners for their content, incentivising more
+                    eductors to share content and ensuring the sustainability of our venture in our goal of
+                    reaching everyone.</li>
+            </ul>
+        </div>
+        <div class="orange-bg">
+            <h1>The Open Box</h1>
+            <p>Our most ambitious goal yet, The Open Box. Taking inspiration from The beekee box, We
+                discovered the operation of the remote education device can be reproduced using The $45
+                Raspberry Pi computer chip and some open source software. With the total assembled cost of
+                our device around $200, compared to the $6,000 Beekee Box. The Open Box stands to be
+                portable, easy to use and a source for blended group learning anywhere at any time. This is our
+                next step in ensuring quality education can be made available everywhere in Africa.</p>
+        </div>
+    </div>
