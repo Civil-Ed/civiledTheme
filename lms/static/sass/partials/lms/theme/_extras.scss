@@ -1,9 +1,11 @@
 /////////////////// General
 
+
 $content_padding_top: 24px;
 $content-padding-bottom: 10px;
 $header-height: 75px;
 $footer-height: 125.5px;
+
 
 body,
 body.view-profile {
@@ -14,6 +16,7 @@ body.view-profile {
 %btn-pl-default-base {
   border-radius: 0;
 }
+
 
 .btn,
 .global-header .nav-links .secondary .btn {
@@ -222,6 +225,9 @@ nav.wrapper-preview-menu {
   }
 }
 
+.search-button {
+  background-color: $primary !important;
+}
 
 /////////////////// Course search
 .find-courses,
@@ -269,8 +275,8 @@ nav.wrapper-preview-menu {
   background-color: $primary;
   color: $white;
   text-align: center;
-  width: 100vw;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .search_bar {
@@ -548,6 +554,7 @@ nav.wrapper-preview-menu {
   padding: 0
 }
 
+
 @media (max-width: 600px) {
   .about-main-container {
     padding: 20px;
@@ -563,5 +570,10 @@ nav.wrapper-preview-menu {
 
   .row li {
     margin: 20px 0 0 0;
+  }
+
+  .landing {
+    width: auto;
+    margin: 20px;
   }
 }
