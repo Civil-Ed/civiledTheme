@@ -108,6 +108,7 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
 .home>header .outer-wrapper {
   margin: 0;
   padding: 0;
+  max-width: 100% !important;
 }
 
 .home>header .title>.heading-group {
@@ -271,7 +272,7 @@ nav.wrapper-preview-menu {
 }
 
 .landing {
-  padding: $section-padding;
+  padding: $section-padding 0;
   background-color: $primary;
   color: $white;
   text-align: center;
