@@ -35,6 +35,14 @@ a:visited:not(.btn):focus {
   text-decoration: underline;
 }
 
+p a:not(.btn):hover,
+p a:not(.btn):focus,
+p a:visited:not(.btn):hover,
+p a:visited:not(.btn):focus {
+  color: #df6514;
+  text-decoration: underline;
+}
+
 h1,
 h2,
 h3,
