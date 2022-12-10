@@ -630,6 +630,7 @@ nav.wrapper-preview-menu {
 
   .landing {
     width: auto;
+    padding: 20px !important;
   }
 
   .mobile-menu .mobile-nav-link a {
@@ -672,17 +673,10 @@ nav.wrapper-preview-menu {
     vertical-align: top;
   }
 
-  .home>header .title .course-search {
-    padding: 20px;
-  }
-
-  .home>header .title .course-search .search-button {
-    right: 0;
-  }
-
   .global-header .hamburger-menu .line {
     background: #ff7518;
   }
+
 }
 
 // ------------------------------------
