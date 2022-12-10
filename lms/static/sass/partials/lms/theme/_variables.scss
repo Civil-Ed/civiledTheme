@@ -3,7 +3,7 @@ $primary: #ff7518;
 // Theme fonts
 $font-family-title: Plex;
 $serif: Crimson;
-$f-sans-serif: Crimson, 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$f-sans-serif: Crimson, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
@@ -28,25 +28,25 @@ $yellow: #f0ad4e !default;
 $brand-color: #ff7518 !default;
 
 
-$background-color: $white  !default;
+$background-color: $white !default;
 $background-color-rgb: color-to-rgb-list($background-color) !default;
-$background-color-dark: $gray-900  !default; // #1a1a1a
+$background-color-dark: $gray-900 !default; // #1a1a1a
 $background-color-dark-rgb: color-to-rgb-list($background-color-dark) !default;
 
-$ion-item-background: $white  !default;
+$ion-item-background: $white !default;
 $ion-item-background-rgb: color-to-rgb-list($ion-item-background) !default;
-$ion-item-background-dark: $gray-900  !default;
+$ion-item-background-dark: $gray-900 !default;
 $ion-item-background-dark-rgb: color-to-rgb-list($ion-item-background-dark) !default;
 
-$primary: $brand-color  !default;
-$secondary: $gray-300  !default;
-$danger: $red  !default;
-$warning: $yellow  !default;
-$success: $green  !default;
-$info: $brand-color  !default;
-$light: $gray-100  !default;
-$medium: $gray-700  !default;
-$dark: $gray-900  !default;
+$primary: $brand-color !default;
+$secondary: $gray-300 !default;
+$danger: $red !default;
+$warning: $yellow !default;
+$success: $green !default;
+$info: $brand-color !default;
+$light: $gray-100 !default;
+$medium: $gray-700 !default;
+$dark: $gray-900 !default;
 
 $colors: (
   primary: (light: $primary, dark: $primary),
@@ -111,7 +111,7 @@ $core-course-hide-progress-on-cards: false !default;
 
 // Configuration options for login page.
 $core-login-button-outline: false !default;
-$core-login-button-outline-dark: $core-login-button-outline  !default;
+$core-login-button-outline-dark: $core-login-button-outline !default;
 $core-login-loading-color: false !default;
 // $core-login-loading-color-dark: $text-color-dark  !default;
 $core-login-hide-forgot-password: false !default;
@@ -123,9 +123,9 @@ $core-more-hide-sitename: false !default;
 $core-more-hide-siteurl: false !default;
 
 // Configuration options for user page.
-$core-user-hide-siteinfo: $core-more-hide-siteinfo  !default;
-$core-user-hide-sitename: $core-more-hide-sitename  !default;
-$core-user-hide-siteurl: $core-more-hide-siteurl  !default;
+$core-user-hide-siteinfo: $core-more-hide-siteinfo !default;
+$core-user-hide-sitename: $core-more-hide-sitename !default;
+$core-user-hide-siteurl: $core-more-hide-siteurl !default;
 
 // Activity icon background colors.
 $activity-icon-colors: (
@@ -153,5 +153,6 @@ $default-margin: 20px;
 ;
 
 // cards
-$card-width:330px;
-$transparent-white:rgba(255, 255, 255, 0.37);
+$card-width: 330px;
+$transparent-white: rgba(255, 255, 255, 0.37
+);
