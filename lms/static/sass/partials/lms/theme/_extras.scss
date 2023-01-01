@@ -1231,6 +1231,27 @@ a.text-info:focus {
   padding: 0
 }
 
+.footer_logo {
+  margin: 0 40px !important;
+}
+.usaid{
+  display: flex;
+  flex-direction: column;
+  width: 50% !important;
+}
+
+.usaid img {
+  width: 50% !important;
+}
+
+.partners{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.partners p {
+  margin-bottom:20px;
+}
 
 @media (max-width: 600px) {
   .about-main-container {
@@ -1298,6 +1319,35 @@ a.text-info:focus {
     background: #ff7518;
   }
 
+  .footer_logo {
+    margin: 0 !important;
+  }
+  .partners {
+    flex-direction: column;
+  }
+  .partners div,.partners p {
+    width: 100% !important;
+  }
+
+  .partners div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .usaid img {
+    width: 100% !important;
+  }
+
+  .footer-about-openedx p{
+    display: flex;
+    flex-direction: space-between !important;
+  }
+  .wrapper-footer footer#footer-openedx .footer-about-openedx p {
+    text-align: right;
+    justify-content: space-between !important;
+  }
 }
 
 // ------------------------------------
